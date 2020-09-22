@@ -40,10 +40,17 @@ public class MainActivity extends AppCompatActivity {
         if ((userName.toUpperCase().equals("Christia".toUpperCase())) && (userPassword.equals("1234"))) {
             android.content.Intent loginToApp = new android.content.Intent (MainActivity.this, SecondActivity.class);
             startActivity(loginToApp);
-        } else {
-            loginError.setText("Username or password is incorrect.");
-
         }
+        else if (!(userName.toUpperCase().equals("Christia".toUpperCase())) && (userPassword.equals("1234"))) {
+            loginError.setText("Username is incorrect.");
+        }
+        else if ((userName.toUpperCase().equals("Christia".toUpperCase())) && !(userPassword.equals("1234"))) {
+            loginError.setText("Password is incorrect.");
+        }
+        else {
+            loginError.setText("Username and password are incorrect.");
+        }
+
 
     }
 
