@@ -1,6 +1,7 @@
 package com.example.bme3890projectapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private EditText et_username;
+    public static final String NAME_EXTRA = "com.example.bme3890projectapp.EXTRA.NAME";
     private EditText et_password;
+    public String name;
     private android.widget.Button login;
     private android.widget.Button signUp;
     private TextView loginError;
@@ -34,11 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 validate(et_username.getText().toString(), et_password.getText().toString());
             }
         });
+
     }
 
     public void validate(String userName, String userPassword) {
         if ((userName.toUpperCase().equals("Christia".toUpperCase())) && (userPassword.equals("1234"))) {
-            android.content.Intent loginToApp = new android.content.Intent (MainActivity.this, SecondActivity.class);
+            String name = et_username.getText().toString();
+            Intent loginToApp = new Intent (MainActivity.this, SecondActivity.class);
+            loginToApp.putExtra(NAME_EXTRA, name);
             startActivity(loginToApp);
         }
         else if (!(userName.toUpperCase().equals("Christia".toUpperCase())) && (userPassword.equals("1234"))) {

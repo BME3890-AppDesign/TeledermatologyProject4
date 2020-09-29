@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/custom_logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".Email"/>
+        <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
