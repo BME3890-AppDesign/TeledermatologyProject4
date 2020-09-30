@@ -6,10 +6,14 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="C-Squared Teledermatology"
-        android:roundIcon="@mipmap/custom_logo_round"
+        android:roundIcon="@mipmap/logo_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Email"/>
+        <activity android:name=".AboutUs"></activity>
+        <activity android:name=".MyResults" />
+        <activity android:name=".MyImages" />
+        <activity android:name=".NewVisit" />
+        <activity android:name=".Email" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".SignUp" />
         <activity android:name=".SecondActivity" />
